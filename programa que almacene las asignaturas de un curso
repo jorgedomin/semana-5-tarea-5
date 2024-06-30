@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+int main() {
+    // Crear una lista (vector) para almacenar las asignaturas
+    std::vector<std::string> asignaturas = {"Matemáticas", "Física", "Química", "Historia", "Lengua"};
+
+    // Mostrar las asignaturas por pantalla
+    std::cout << "Las asignaturas del curso son:" << std::endl;
+    for (const auto& asignatura : asignaturas) {
+        std::cout << "- " << asignatura << std::endl;
+    }
+
+    return 0;
+}
