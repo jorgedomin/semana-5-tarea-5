@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+int main() {
+    // Crear una lista (vector) para almacenar las asignaturas
+    std::vector<std::string> asignaturas = {"Matemáticas", "Física", "Química", "Historia", "Lengua"};
+    std::vector<std::string> asignaturasNoAprobadas;
+    for (const auto& asignatura : asignaturas) { // Preguntar al usuario la nota de cada asignatura
+        int nota;
+        std::cout << "Ingrese la nota para " << asignatura << ": ";
+        std::cin >> nota;
+        // Si la nota es menor a 5, agregar la asignatura a la lista de no aprobadas
+        if (nota < 5) {
+            asignaturasNoAprobadas.push_back(asignatura);
+        }
+    }
+    if (asignaturasNoAprobadas.empty()) { // Mostrar las asignaturas que el usuario tiene que repetir
+        std::cout << "¡Felicidades! Has aprobado todas las asignaturas." << std::endl;
+    } else {
+        std::cout << "Debes repetir las siguientes asignaturas:" << std::endl;
+        for (const auto& asignatura : asignaturasNoAprobadas) {
+            std::cout << "- " << asignatura << std::endl;
+        }
+    }
+    return 0;
+}
