@@ -1,17 +1,12 @@
 #include <iostream>
 #include <vector>
-
 int main() {
-    // Crear un vector para almacenar los números del 1 al 10
-    std::vector<int> numeros;
-
+    std::vector<int> numeros;  // Crear un vector para almacenar los números del 1 al 10
     // Llenar el vector con los números del 1 al 10
     for (int i = 1; i <= 10; ++i) {
         numeros.push_back(i);
     }
-
-    // Mostrar los números en orden inverso separados por comas
-    std::cout << "Números del 1 al 10 en orden inverso:" << std::endl;
+    std::cout << "Números del 1 al 10 en orden inverso:" << std::endl; // Mostrar los números en orden inverso separados por comas
     for (int i = numeros.size() - 1; i >= 0; --i) {
         std::cout << numeros[i];
         if (i > 0) {
@@ -19,6 +14,5 @@ int main() {
         }
     }
     std::cout << std::endl;
-
     return 0;
 }
