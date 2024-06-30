@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+int main() {
+    // Crear una lista (vector) para almacenar el abecedario
+    std::vector<char> abecedario;
+    for (char letra = 'A'; letra <= 'Z'; ++letra) {
+        abecedario.push_back(letra);
+    }
+    std::vector<char> resultado;  // Crear un vector para almacenar las letras resultantes
+    for (size_t i = 0; i < abecedario.size(); ++i) {
+        if ((i + 1) % 3 != 0) { // i + 1 para tener en cuenta la posición 1-based
+            resultado.push_back(abecedario[i]);
+        }
+    }
+    std::cout << "El abecedario sin las letras en posiciones múltiplos de 3 es: ";   // Mostrar la lista resultante
+    for (const auto& letra : resultado) {
+        std::cout << letra << " ";
+    }
+    std::cout << std::endl;
+    return 0;
+}
