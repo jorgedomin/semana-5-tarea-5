@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 int main() {
-    // Crear una lista (vector) para almacenar el abecedario
-    std::vector<char> abecedario;
+    std::vector<char> abecedario;   // Crear una lista (vector) para almacenar el abecedario
     for (char letra = 'A'; letra <= 'Z'; ++letra) {
         abecedario.push_back(letra);
     }
